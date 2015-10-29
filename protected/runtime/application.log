@@ -1,0 +1,1165 @@
+2015/10/21 11:01:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'bansach'' in /var/www/yii_framework/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /var/www/yii_framework/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /var/www/yii_framework/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /var/www/yii_framework/framework/base/CModule.php(394): CDbConnection->init()
+#3 /var/www/yii_framework/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /var/www/yii_framework/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /var/www/yii_framework/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /var/www/yii_framework/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /var/www/yii_framework/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii_framework/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/bansach/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bansach/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/bansach/index.php?r=gii/default/index
+---
+2015/10/21 13:18:38 [error] [php] include(Lm.php): failed to open stream: No such file or directory (/var/www/yii_framework/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/bansach/protected/views/book/_form.php(36): spl_autoload_call()
+#1 /var/www/yii_framework/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii_framework/framework/web/CBaseController.php(95): BookController->renderInternal()
+#3 /var/www/yii_framework/framework/web/CController.php(869): BookController->renderFile()
+#4 /var/www/bansach/protected/views/book/create.php(18): BookController->renderPartial()
+#5 /var/www/yii_framework/framework/web/CBaseController.php(126): require()
+#6 /var/www/yii_framework/framework/web/CBaseController.php(95): BookController->renderInternal()
+#7 /var/www/yii_framework/framework/web/CController.php(869): BookController->renderFile()
+#8 /var/www/yii_framework/framework/web/CController.php(782): BookController->renderPartial()
+#9 /var/www/bansach/protected/controllers/BookController.php(79): BookController->render()
+#10 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#11 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): BookController->runAction()
+#13 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii_framework/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): BookController->filterAccessControl()
+#16 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii_framework/framework/web/CController.php(265): BookController->runActionWithFilters()
+#19 /var/www/yii_framework/framework/web/CWebApplication.php(282): BookController->run()
+#20 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#22 /var/www/bansach/index.php(13): CWebApplication->run()
+REQUEST_URI=/bansach/index.php?r=book/create
+in /var/www/bansach/protected/views/book/_form.php (36)
+in /var/www/bansach/protected/views/book/create.php (18)
+in /var/www/bansach/protected/controllers/BookController.php (79)
+2015/10/21 13:55:17 [error] [exception.CException] exception 'CException' with message 'Property "Book.nxb_id" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(145): CComponent->__get('nxb_id')
+#1 /var/www/yii_framework/framework/web/helpers/CHtml.php(2728): CActiveRecord->__get('nxb_id')
+#2 /var/www/yii_framework/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(Book), 'nxb_id')
+#3 /var/www/yii_framework/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Book), 'nxb_id', Array)
+#4 /var/www/yii_framework/framework/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(Book), 'nxb_id', Array)
+#5 /var/www/bansach/protected/views/book/_form.php(24): CActiveForm->textField(Object(Book), 'nxb_id')
+#6 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#7 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#8 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#9 /var/www/bansach/protected/views/book/create.php(18): CController->renderPartial('_form', Array)
+#10 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#11 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#12 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#13 /var/www/yii_framework/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /var/www/bansach/protected/controllers/BookController.php(79): CController->render('create', Array)
+#15 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#16 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#26 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#27 /var/www/bansach/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/bansach/index.php?r=book/create
+---
+2015/10/21 14:32:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=t&limit=10&timestamp=1445412753622
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 03:25:58 [error] [exception.CException] exception 'CException' with message 'Property "Book.tags" is not defined.' in C:\xampp\htdocs\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('tags')
+#1 C:\xampp\htdocs\bansach\protected\models\Book.php(133): CActiveRecord->__get('tags')
+#2 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(1871): Book->afterFind()
+#3 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(1356): CActiveRecord->populateRecord(Array)
+#4 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(1491): CActiveRecord->query(Object(CDbCriteria))
+#5 C:\xampp\htdocs\bansach\protected\controllers\BookController.php(150): CActiveRecord->findByPk('1')
+#6 C:\xampp\htdocs\bansach\protected\controllers\BookController.php(50): BookController->loadModel('1')
+#7 [internal function]: BookController->actionView('1')
+#8 C:\xampp\htdocs\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#9 C:\xampp\htdocs\yii_framework\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii_framework\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii_framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii_framework\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('book/view')
+#20 C:\xampp\htdocs\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\bansach\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/bansach/index.php?r=book/view&id=1
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 03:26:45 [error] [exception.CException] exception 'CException' with message 'Property "Book.tags" is not defined.' in C:\xampp\htdocs\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('tags')
+#1 C:\xampp\htdocs\bansach\protected\models\Book.php(133): CActiveRecord->__get('tags')
+#2 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(1871): Book->afterFind()
+#3 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(1356): CActiveRecord->populateRecord(Array)
+#4 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(1491): CActiveRecord->query(Object(CDbCriteria))
+#5 C:\xampp\htdocs\bansach\protected\controllers\BookController.php(150): CActiveRecord->findByPk('1')
+#6 C:\xampp\htdocs\bansach\protected\controllers\BookController.php(50): BookController->loadModel('1')
+#7 [internal function]: BookController->actionView('1')
+#8 C:\xampp\htdocs\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#9 C:\xampp\htdocs\yii_framework\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii_framework\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii_framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii_framework\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('book/view')
+#20 C:\xampp\htdocs\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\bansach\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/bansach/index.php?r=book/view&id=1
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 15:42:01 [error] [exception.CException] exception 'CException' with message 'Property "Book._oldTags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(145): CComponent->__get('_oldTags')
+#1 /var/www/bansach/protected/models/Book.php(126): CActiveRecord->__get('_oldTags')
+#2 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1100): Book->afterSave()
+#3 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#4 /var/www/bansach/protected/controllers/BookController.php(68): CActiveRecord->save()
+#5 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#6 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('create')
+#15 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#16 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /var/www/bansach/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bansach/index.php?r=book/create
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 15:42:41 [error] [exception.CException] exception 'CException' with message 'Property "Book.tags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(145): CComponent->__get('tags')
+#1 /var/www/bansach/protected/models/Book.php(127): CActiveRecord->__get('tags')
+#2 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1100): Book->afterSave()
+#3 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#4 /var/www/bansach/protected/controllers/BookController.php(68): CActiveRecord->save()
+#5 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#6 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('create')
+#15 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#16 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /var/www/bansach/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/bansach/index.php?r=book/create
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 15:44:21 [error] [php] include(Tag.php): failed to open stream: No such file or directory (/var/www/yii_framework/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/bansach/protected/models/Tacgia.php(165): spl_autoload_call()
+#1 /var/www/bansach/protected/models/Tacgia.php(152): Tacgia->addTags()
+#2 /var/www/bansach/protected/models/Book.php(127): Tacgia->updateFrequency()
+#3 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1100): Book->afterSave()
+#4 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(809): Book->insert()
+#5 /var/www/bansach/protected/controllers/BookController.php(68): Book->save()
+#6 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#7 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): BookController->runAction()
+#9 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii_framework/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): BookController->filterAccessControl()
+#12 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii_framework/framework/web/CController.php(265): BookController->runActionWithFilters()
+#15 /var/www/yii_framework/framework/web/CWebApplication.php(282): BookController->run()
+#16 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#18 /var/www/bansach/index.php(13): CWebApplication->run()
+REQUEST_URI=/bansach/index.php?r=book/create
+in /var/www/bansach/protected/models/Tacgia.php (165)
+in /var/www/bansach/protected/models/Tacgia.php (152)
+in /var/www/bansach/protected/models/Book.php (127)
+2015/10/21 15:47:52 [error] [exception.CException] exception 'CException' with message 'Tacgia and its behaviors do not have a method or closure named "suggestTags".' in /var/www/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(227): CComponent->__call('suggestTags', Array)
+#1 /var/www/bansach/protected/controllers/BookController.php(173): CActiveRecord->__call('suggestTags', Array)
+#2 /var/www/bansach/protected/controllers/BookController.php(173): Tacgia->suggestTags('abcd')
+#3 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionSuggestTags()
+#4 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#13 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#14 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/bansach/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=abcd&limit=10&timestamp=1445417272118
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 15:47:55 [error] [exception.CException] exception 'CException' with message 'Tacgia and its behaviors do not have a method or closure named "suggestTags".' in /var/www/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(227): CComponent->__call('suggestTags', Array)
+#1 /var/www/bansach/protected/controllers/BookController.php(173): CActiveRecord->__call('suggestTags', Array)
+#2 /var/www/bansach/protected/controllers/BookController.php(173): Tacgia->suggestTags('t')
+#3 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionSuggestTags()
+#4 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#13 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#14 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/bansach/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=t&limit=10&timestamp=1445417275643
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 15:47:57 [error] [exception.CException] exception 'CException' with message 'Tacgia and its behaviors do not have a method or closure named "suggestTags".' in /var/www/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(227): CComponent->__call('suggestTags', Array)
+#1 /var/www/bansach/protected/controllers/BookController.php(173): CActiveRecord->__call('suggestTags', Array)
+#2 /var/www/bansach/protected/controllers/BookController.php(173): Tacgia->suggestTags('to')
+#3 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionSuggestTags()
+#4 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#13 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#14 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/bansach/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=to&limit=10&timestamp=1445417277370
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 15:48:05 [error] [exception.CException] exception 'CException' with message 'Tacgia and its behaviors do not have a method or closure named "suggestTags".' in /var/www/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(227): CComponent->__call('suggestTags', Array)
+#1 /var/www/bansach/protected/controllers/BookController.php(173): CActiveRecord->__call('suggestTags', Array)
+#2 /var/www/bansach/protected/controllers/BookController.php(173): Tacgia->suggestTags('to')
+#3 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionSuggestTags()
+#4 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#13 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#14 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/bansach/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=to&limit=10&timestamp=1445417285045
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/21 20:02:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in /var/www/yii_framework/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#2 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#9 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#10 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/bansach/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=abcde&limit=10&timestamp=1445432541214
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 08:36:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in /var/www/yii_framework/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#2 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#9 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#10 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/bansach/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=ab&limit=10&timestamp=1445477805709
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 08:36:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in /var/www/yii_framework/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#2 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#9 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#10 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/bansach/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445477809129
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:02:45 [error] [exception.CException] exception 'CException' with message 'Property "Book.tags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(145): CComponent->__get('tags')
+#1 /var/www/yii_framework/framework/web/helpers/CHtml.php(2728): CActiveRecord->__get('tags')
+#2 /var/www/yii_framework/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(Book), 'tags')
+#3 /var/www/yii_framework/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Book), 'tags', Array)
+#4 /var/www/yii_framework/framework/web/widgets/CAutoComplete.php(216): CHtml::activeTextField(Object(Book), 'tags', Array)
+#5 /var/www/yii_framework/framework/web/CBaseController.php(147): CAutoComplete->init()
+#6 /var/www/yii_framework/framework/web/CBaseController.php(180): CBaseController->createWidget('CAutoComplete', Array)
+#7 /var/www/bansach/protected/views/book/_form.php(42): CBaseController->widget('CAutoComplete', Array)
+#8 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#9 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#10 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#11 /var/www/bansach/protected/views/book/create.php(18): CController->renderPartial('_form', Array)
+#12 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#13 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#14 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#15 /var/www/yii_framework/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#16 /var/www/bansach/protected/controllers/BookController.php(79): CController->render('create', Array)
+#17 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#18 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('create')
+#27 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#28 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#29 /var/www/bansach/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/bansach/index.php?r=book/create
+---
+2015/10/22 09:03:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445479398211
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:03:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445479437944
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:04:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445479491708
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:04:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=abc&limit=10&timestamp=1445479492311
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:04:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=ab&limit=10&timestamp=1445479493287
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:04:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445479493944
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:05:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445479533086
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:06:50 [error] [exception.CException] exception 'CException' with message 'Property "Book.tags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(145): CComponent->__get('tags')
+#1 /var/www/yii_framework/framework/web/helpers/CHtml.php(2728): CActiveRecord->__get('tags')
+#2 /var/www/yii_framework/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(Book), 'tags')
+#3 /var/www/yii_framework/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Book), 'tags', Array)
+#4 /var/www/yii_framework/framework/web/widgets/CAutoComplete.php(216): CHtml::activeTextField(Object(Book), 'tags', Array)
+#5 /var/www/yii_framework/framework/web/CBaseController.php(147): CAutoComplete->init()
+#6 /var/www/yii_framework/framework/web/CBaseController.php(180): CBaseController->createWidget('CAutoComplete', Array)
+#7 /var/www/bansach/protected/views/book/_form.php(36): CBaseController->widget('CAutoComplete', Array)
+#8 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#9 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#10 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#11 /var/www/bansach/protected/views/book/create.php(18): CController->renderPartial('_form', Array)
+#12 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#13 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#14 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#15 /var/www/yii_framework/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#16 /var/www/bansach/protected/controllers/BookController.php(79): CController->render('create', Array)
+#17 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#18 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('create')
+#27 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#28 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#29 /var/www/bansach/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/bansach/index.php?r=book/create
+---
+2015/10/22 09:10:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445479823841
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:21:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445480474624
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:21:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=t&limit=10&timestamp=1445480476985
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:22:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445480550430
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:26:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii_framework/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii_framework/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#8 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/suggestTag...')
+#9 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/bansach/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/bansach/index.php?r=book/suggestTags&q=a&limit=10&timestamp=1445480778612
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/22 09:34:44 [error] [exception.CException] exception 'CException' with message 'Property "Book.tags" is not defined.' in /var/www/yii_framework/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(145): CComponent->__get('tags')
+#1 /var/www/bansach/protected/models/Book.php(152): CActiveRecord->__get('tags')
+#2 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1871): Book->afterFind()
+#3 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1892): CActiveRecord->populateRecord(Array, true)
+#4 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1356): CActiveRecord->populateRecords(Array, true, NULL)
+#5 /var/www/yii_framework/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /var/www/yii_framework/framework/web/CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#7 /var/www/yii_framework/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 /var/www/yii_framework/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#9 /var/www/yii_framework/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#10 /var/www/yii_framework/framework/web/CBaseController.php(147): CListView->init()
+#11 /var/www/yii_framework/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#12 /var/www/bansach/protected/views/book/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#13 /var/www/yii_framework/framework/web/CBaseController.php(126): require('/var/www/bansac...')
+#14 /var/www/yii_framework/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/bansac...', Array, true)
+#15 /var/www/yii_framework/framework/web/CController.php(869): CBaseController->renderFile('/var/www/bansac...', Array, true)
+#16 /var/www/yii_framework/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#17 /var/www/bansach/protected/controllers/BookController.php(123): CController->render('index', Array)
+#18 /var/www/yii_framework/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#19 /var/www/yii_framework/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /var/www/yii_framework/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /var/www/yii_framework/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /var/www/yii_framework/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /var/www/yii_framework/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /var/www/yii_framework/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /var/www/yii_framework/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii_framework/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('index')
+#28 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#29 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#30 /var/www/bansach/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/bansach/index.php?r=book/index
+HTTP_REFERER=http://localhost/bansach/index.php?r=book/create
+---
+2015/10/28 11:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in /var/www/yii_framework/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CController.php(270): CController->missingAction('post')
+#1 /var/www/yii_framework/framework/web/CWebApplication.php(282): CController->run('post')
+#2 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('user/post')
+#3 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/bansach/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bansach/index.php?r=user/post
+---
+2015/10/28 11:59:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /var/www/yii_framework/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii_framework/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /var/www/yii_framework/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/bansach/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bansach/index.php?r=post
+---
+2015/10/28 08:43:54 [error] [php] Undefined variable: model (C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(47): SiteController->render()
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CWebApplication->run()
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php (11)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php (47)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 08:44:17 [error] [php] Undefined variable: criteria (C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(47): SiteController->render()
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CWebApplication->run()
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php (11)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php (47)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 09:04:37 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.image" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php(11): CComponent->__get('image')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(55): CController->render('index', Array)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/site/index')
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=book/admin
+---
+2015/10/28 09:05:10 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.author" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php(12): CComponent->__get('author')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(55): CController->render('index', Array)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/site/index')
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=book/admin
+---
+2015/10/28 15:17:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bansach.tbl_nxb' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_nxb`.
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 15:17:14 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{nxb}}" for active record class "Nxb" cannot be found in the database.' in C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Nxb))
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(138): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\gii\generators\crud\CrudCode.php(66): CActiveRecord->__get('tableSchema')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=gii/crud/index
+---
+2015/10/28 15:17:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bansach.tbl_nxb' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_nxb`.
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 15:17:35 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{nxb}}" for active record class "Nxb" cannot be found in the database.' in C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Nxb))
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(138): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\gii\generators\crud\CrudCode.php(66): CActiveRecord->__get('tableSchema')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=gii/crud/index
+---
+2015/10/28 15:18:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bansach.tbl_nxb' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_nxb`.
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 15:18:50 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{nxb}}" for active record class "Nxb" cannot be found in the database.' in C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Nxb))
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(138): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\gii\generators\crud\CrudCode.php(66): CActiveRecord->__get('tableSchema')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=gii/crud/index
+---
+2015/10/28 16:36:28 [error] [exception.CException] exception 'CException' with message 'Property "Nxb.url" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('url')
+#1 C:\xampp\htdocs\ha123\laptrinhweb\protected\components\views\top_nxb.php(9): CActiveRecord->__get('url')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(130): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, false)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, false)
+#5 C:\xampp\htdocs\ha123\laptrinhweb\protected\components\wTop_nxb.php(17): CWidget->render('top_nxb', Array)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(181): wTop_nxb->run()
+#7 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\layouts\main.php(75): CBaseController->widget('wTop_nxb')
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(214): COutputProcessor->run()
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#15 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#16 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#19 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(61): CController->render('index', Array)
+#20 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#21 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#25 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/site/index')
+#26 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php
+---
+2015/10/28 16:36:49 [error] [exception.CException] exception 'CException' with message 'Property "Nxb.images" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('images')
+#1 C:\xampp\htdocs\ha123\laptrinhweb\protected\components\views\top_nxb.php(10): CActiveRecord->__get('images')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(130): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, false)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, false)
+#5 C:\xampp\htdocs\ha123\laptrinhweb\protected\components\wTop_nxb.php(17): CWidget->render('top_nxb', Array)
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(181): wTop_nxb->run()
+#7 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\layouts\main.php(75): CBaseController->widget('wTop_nxb')
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(214): COutputProcessor->run()
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#15 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#16 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#19 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(61): CController->render('index', Array)
+#20 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#21 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#25 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/site/index')
+#26 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php
+---
+2015/10/28 17:21:19 [error] [exception.CException] exception 'CException' with message 'Property "Book.url" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('url')
+#1 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php(2): CActiveRecord->__get('url')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(61): CController->render('index', Array)
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/site/index')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php
+---
+2015/10/28 17:24:25 [error] [exception.CException] exception 'CException' with message 'Property "Book.url" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('url')
+#1 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php(2): CActiveRecord->__get('url')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(61): CController->render('index', Array)
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/site/index')
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php
+---
+2015/10/28 17:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view?id=26".' in C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(270): CController->missingAction('view?id=26')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('view?id=26')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/book/view?id=2...')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/book/view?id=26
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=/site/index
+---
+2015/10/28 17:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view?id=1".' in C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(270): CController->missingAction('view?id=1')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('view?id=1')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/book/view?id=1')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/book/view?id=1
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=/site/index
+---
+2015/10/28 17:26:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view?id=1".' in C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(270): CController->missingAction('view?id=1')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('view?id=1')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/book/view?id=1')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/book/view?id=1
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=/site/index
+---
+2015/10/28 17:33:37 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\ha123\laptrinhweb\protected\views\book\view.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): BookController->renderFile()
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): BookController->renderPartial()
+#2 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\BookController.php(51): BookController->render()
+#3 unknown(0): BookController->actionView()
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(133): BookController->runAction()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CInlineFilter.php(58): BookController->filterAccessControl()
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): BookController->runActionWithFilters()
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): BookController->run()
+#15 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CWebApplication->run()
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/book/view&id=26
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\views\book\view.php (2)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\BookController.php (51)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 17:40:57 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php(61): SiteController->render()
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CWebApplication->run()
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/site/index
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\views\site\index.php (20)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\SiteController.php (61)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 17:55:15 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\ha123\laptrinhweb\protected\views\nxb\view.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): NxbController->renderFile()
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): NxbController->renderPartial()
+#2 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\NxbController.php(56): NxbController->render()
+#3 unknown(0): NxbController->actionView()
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(133): NxbController->runAction()
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CInlineFilter.php(58): NxbController->filterAccessControl()
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): NxbController->runActionWithFilters()
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): NxbController->run()
+#15 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CWebApplication->run()
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/nxb/view&id=3
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\views\nxb\view.php (5)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\NxbController.php (56)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/28 17:55:30 [error] [exception.CException] exception 'CException' with message 'Property "Nxb.introduc" is not defined.' in C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('introduc')
+#1 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\nxb\view.php(5): CActiveRecord->__get('introduc')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\NxbController.php(56): CController->render('view', Array)
+#7 [internal function]: NxbController->actionView('3')
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(NxbController), Array)
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(NxbController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/nxb/view')
+#20 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/nxb/view&id=3
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=/book/view&id=21
+---
+2015/10/29 02:54:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bansach.comments' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `comments`.
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\behaviors\CommentableBehavior.php (106)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\behaviors\CommentableBehavior.php (157)
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\views\comment\commentList.php (6)
+2015/10/29 02:54:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "comments" for active record class "Comment" cannot be found in the database.' in C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Comment))
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\YiiBase.php(217): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\behaviors\CommentableBehavior.php(106): YiiBase::createComponent('comment.models....')
+#4 C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\behaviors\CommentableBehavior.php(157): CommentableBehavior->getComments()
+#5 [internal function]: CommentableBehavior->getCommentDataProvider()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getCommentDataP...', Array)
+#8 C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\views\comment\commentList.php(6): CActiveRecord->__call('getCommentDataP...', Array)
+#9 C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\views\comment\commentList.php(6): Book->getCommentDataProvider()
+#10 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\ha123\laptrinhweb\protected\views\book\view.php(21): CController->renderPartial('comment.views.c...', Array)
+#14 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\ha123\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#18 C:\xampp\htdocs\ha123\laptrinhweb\protected\controllers\BookController.php(51): CController->render('view', Array)
+#19 [internal function]: BookController->actionView('26')
+#20 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#21 C:\xampp\htdocs\ha123\yii_framework\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#22 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#29 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('view')
+#31 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/book/view')
+#32 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#33 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/book/view&id=26
+HTTP_REFERER=http://localhost/ha123/laptrinhweb/index.php?r=/site/index
+---
+2015/10/29 02:57:41 [warning] [application] Failed to set unsafe attribute "type" of "Comment".
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/29 02:57:41 [warning] [application] Failed to set unsafe attribute "key" of "Comment".
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/29 03:17:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\ha123\yii_framework\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\ha123\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/user/admin')
+#9 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/user/admin
+---
+2015/10/29 03:18:31 [warning] [application] Failed to set unsafe attribute "type" of "Comment".
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/29 03:18:31 [warning] [application] Failed to set unsafe attribute "key" of "Comment".
+in C:\xampp\htdocs\ha123\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\ha123\laptrinhweb\index.php (13)
+2015/10/29 03:19:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ha123\yii_framework\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\ha123\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/book/index.php')
+#3 C:\xampp\htdocs\ha123\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ha123\laptrinhweb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ha123/laptrinhweb/index.php?r=/book/index.php
+---
