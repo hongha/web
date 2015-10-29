@@ -33,5 +33,11 @@
 	<?php echo CHtml::encode($data->status); ?>
 	<br />
 
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('time')); ?>:</b>
+	<?php echo CHtml::encode($data->time); ?>
+	<br />
+
+	*/ ?>
 
 </div>

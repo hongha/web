@@ -28,5 +28,6 @@ $this->menu=array(
 		'cost',
 		'number',
 		'status',
+		'time',
 	),
 )); ?>

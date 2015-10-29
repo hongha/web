@@ -11,6 +11,7 @@
  * @property integer $cost
  * @property integer $number
  * @property integer $status
+ * @property string $time
  */
 class Giohang extends CActiveRecord
 {
@@ -30,12 +31,12 @@ class Giohang extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_book, id_user, name_book, cost, number, status', 'required'),
+			array('id_book, id_user, name_book, cost, number, status, time', 'required'),
 			array('id_book, id_user, cost, number, status', 'numerical', 'integerOnly'=>true),
 			array('name_book', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_book, id_user, name_book, cost, number, status', 'safe', 'on'=>'search'),
+			array('id, id_book, id_user, name_book, cost, number, status, time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +64,7 @@ class Giohang extends CActiveRecord
 			'cost' => 'Cost',
 			'number' => 'Number',
 			'status' => 'Status',
+			'time' => 'Time',
 		);
 	}
 
@@ -91,6 +93,7 @@ class Giohang extends CActiveRecord
 		$criteria->compare('cost',$this->cost);
 		$criteria->compare('number',$this->number);
 		$criteria->compare('status',$this->status);
+		$criteria->compare('time',$this->time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
