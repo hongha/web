@@ -15,30 +15,26 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_user'); ?>
-		<?php echo $form->textField($model,'id_user'); ?>
-		<?php echo $form->error($model,'id_user'); ?>
+		<span>ID khách hàng: </span>
+		<?php echo $model->id_user; ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'content'); ?>
+		<span>Nội dung phản hồi: </span>
+		<?php echo $model->content; ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
+		<p>Trạng thái</p>
 		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'messeage'); ?>
+		<p>Trả lời</p>
 		<?php echo $form->textArea($model,'messeage',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'messeage'); ?>
 	</div>

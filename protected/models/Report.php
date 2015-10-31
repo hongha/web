@@ -7,7 +7,7 @@
  * @property integer $id
  * @property integer $id_user
  * @property string $content
- * @property integer $status
+ * @property string $status
  * @property string $messeage
  */
 class Report extends CActiveRecord
@@ -29,7 +29,8 @@ class Report extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id_user, content, status, messeage', 'required'),
-			array('id_user, status', 'numerical', 'integerOnly'=>true),
+			array('id_user', 'numerical', 'integerOnly'=>true),
+			array('status', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, id_user, content, status, messeage', 'safe', 'on'=>'search'),
@@ -82,7 +83,7 @@ class Report extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('id_user',$this->id_user);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('status',$this->status,true);
 		$criteria->compare('messeage',$this->messeage,true);
 
 		return new CActiveDataProvider($this, array(

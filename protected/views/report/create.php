@@ -1,18 +1,6 @@
-<?php
-/* @var $this ReportController */
-/* @var $model Report */
 
-$this->breadcrumbs=array(
-	'Reports'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'List Report', 'url'=>array('index')),
-	array('label'=>'Manage Report', 'url'=>array('admin')),
-);
-?>
-
-<h1>Create Report</h1>
-
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<div class="all-ctg nplr">
+	<p class="all-category">Phản hồi</p>
+</div>
+<br/>
+<?php $this->renderPartial('_form2', array('model'=>$model)); ?>

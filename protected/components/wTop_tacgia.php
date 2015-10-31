@@ -11,8 +11,8 @@ class wTop_tacgia extends CWidget
 		$criteria = new CDbCriteria ();
 		$criteria->limit = 3;
 		$criteria->order = 'frequency desc';
-		$list = Nxb::model()->findAll($criteria);		
-		$this->render('top_nxb', array(
+		$list = Tacgia::model()->findAll($criteria);		
+		$this->render('top_tacgia', array(
 			'list'=>$list,			
 		));
 	}

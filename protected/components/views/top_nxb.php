@@ -7,7 +7,7 @@
 	<?php foreach($list as  $data):?>		
 	<div class="row">
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=/nxb/view&id=<?php echo $data->id;?>">
-			<img src="<?php echo $data->image; ?>" class="col-md-5 margin-top-20">
+			<img src="<?php echo $data->image; ?>" class="col-md-5 margin-top-20 top-img">
 			<p class="top-name "><?php echo $data->name;?></p>
 		</a>
 	</div>

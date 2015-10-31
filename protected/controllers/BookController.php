@@ -97,7 +97,23 @@ class BookController extends Controller
 			'model'=>$model,
 		));
 	}
+	public function actionSearch($id)
+	{
+		$criteria = new CDbCriteria ();
+		$criteria->compare('type',$id);
+		$criteria->order = 'id desc';
+		$list_book = new CActiveDataProvider('Book', array(
+				'pagination'=>array(
+				'pageSize'=>'9',
+				),
+				'criteria'=>$criteria,
+			));
 
+		// $list_book = Book::model()->findAll($criteria);		
+		$this->render('search', array(
+			'list_book'=>$list_book,			
+		));
+	}
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.

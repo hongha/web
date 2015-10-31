@@ -29,14 +29,14 @@ class ReportController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','update'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -55,7 +55,15 @@ class ReportController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-
+	public function actionPhanhoi($id_user)
+	{
+		$criteria = new CDbCriteria ();
+		$criteria->compare = '';
+		$list = Report::model()->findAll($criteria);		
+		$this->render('top_tacgia', array(
+			'list'=>$list,			
+		));
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -71,7 +79,7 @@ class ReportController extends Controller
 		{
 			$model->attributes=$_POST['Report'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('site/index','id'=>$model->id));
 		}
 
 		$this->render('create',array(
