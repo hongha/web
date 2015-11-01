@@ -28,7 +28,7 @@ class ReportController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','report'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -55,13 +55,24 @@ class ReportController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-	public function actionPhanhoi($id_user)
-	{
+	public function actionReport($user_id)
+	{	
+		//gop y da tra loi
 		$criteria = new CDbCriteria ();
-		$criteria->compare = '';
-		$list = Report::model()->findAll($criteria);		
-		$this->render('top_tacgia', array(
-			'list'=>$list,			
+		$criteria->compare('id_user',$user_id);
+		$criteria->compare('status','1',true);
+		$criteria->order='id desc';
+		$list_reported = Report::model()->findAll($criteria);	
+		//gop y chua tra loi
+		$criteria = new CDbCriteria ();
+		$criteria->compare('id_user',$user_id);
+		$criteria->compare('status','0',true);
+		$criteria->order='id desc';
+		$list_report = Report::model()->findAll($criteria);
+
+		$this->render('report', array(
+			'list_reported'=>$list_reported,
+			'list_report'=>$list_report,		
 		));
 	}
 	/**

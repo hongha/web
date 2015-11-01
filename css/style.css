@@ -53,6 +53,9 @@ table {
 	height: 36px;
 	border-bottom: 1px #e2dbc7 solid;
 }
+.margin-bottom-20{
+	margin-bottom: 20px;
+}
 .npl{
 	padding-left: 0px;
 }
@@ -276,7 +279,7 @@ table {
 	position: absolute;
 	top: 3px;
 	font-size: 20px;
-	right: 360px;
+	right: 90px;
 	color: #9c6f4e;
 }
 .top-img{
@@ -348,3 +351,55 @@ table {
 	font-size: 10px;
 	border:none !important;
 }
+/********************* Footer ************************/
+#footer{
+	padding: 40px 0 30px 0; 
+	height: 240px;
+	background-color: white;
+}
+#footer p{
+	line-height: 1.8;
+}
+.padding{
+	padding: 0px;
+}
+.form-input{
+	height: 35px;
+}
+.footer-img img{
+	width: 36px;
+	height:auto;
+	margin-left: 5px;
+}
+.footer-img p{
+	font-size: 20px;
+}
+.footer-img{
+	float: right;
+}
+#copyright{
+	background-color: #766456;
+	height: 55px;
+}
+#copyright p{
+	font-size: 14px;
+	color: white;
+	line-height: 55px;
+}
+.enjoy{
+	color: #ef5e73;
+}
+.btn-tripopus{
+	border: 1px #e9e3d6 solid;
+	box-shadow: none;
+	height: 35px;
+	border-radius: 2px;
+	background-color:#efebde;
+	color:#9c6f4e;
+}
+.btn-tripopus:hover{
+	border-color: #e9e3d6;
+	background: #E6E2D5;
+	color:#9c6f4e;
+}
+/******************* dnd of footer ******************/

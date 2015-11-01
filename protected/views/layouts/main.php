@@ -1,3 +1,4 @@
+
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
 <html>
@@ -16,34 +17,7 @@
 <div class="header-web">
 <div class="container ">
 	<div id="mainmenu" class="row npl navbar-right user-header" >
-	<?php if (!Yii::app()->user->isGuest) {
-		echo Yii::app()->user->id;
-		?>
-
-		<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=/report/admin"><span class="glyphicon glyphicon-envelope report"></span></a>
-		<?php
-	} ?>
-		
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				// array('label'=>'', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	<?php
-		if (Yii::app()->user->name=='admin') {
-		?>
-		<a href="#" class="quanli"><span>Quản lí</span></a>
-		<?php
-
-		}
-		elseif(!Yii::app()->user->isGuest and Yii::app()->user->name!='admin')
-		{
-		?>
-		<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=/report/create" class="quanli"><span>Phản hồi</span></a>
-		<?php
-		}
-	?>
+		<?php $this->widget('wHeader');?>
 	</div><!-- mainmenu -->
 </div>
 </div>
@@ -80,12 +54,7 @@
 					<?php endif?>
 
 					<?php echo $content; ?>
-					  <?php 
-        				 $dat=new Report;
-         				$this->renderPartial('//report/_search', 
-            			array('model'=>$dat,
-             			));
-         			?>
+			
 				</div>
 			</div>
 		</div>
@@ -99,10 +68,53 @@
 
 
 
-
-	<div id="footer">
-
-	</div><!-- footer -->
+<div id="footer">
+	<div class="container">
+		<div class="row">
+            <div class="col-md-4">
+            <div class="row">
+               <p>Công ty TNHH Hedspi Việt Nam</p>
+               <p>Tầng 4,5 Tòa nhà D9 Đại Học Bách Khoa Hà Nội</p>
+               <p>Hà Nội, Việt Nam</p>
+               <p>hedspi@gmail.com</p>
+               <br />
+               <span id="color-enjoy">Chọn ngôn ngữ</span> <a href="#" class="enjoy">Japanes</a> <a href="#" class="enjoy">Việt Nam</a>
+            </div>
+            </div>
+        
+	        <div class="col-md-4">
+	        	<div class=" footer-img">
+	        	<p id="tripopus-social">Tìm chúng tôi trên</p>
+	               <img src="<?php echo Yii::app()->request->baseUrl; ?>/image/facebook.png">
+	               <img src="<?php echo Yii::app()->request->baseUrl; ?>/image/google.png">
+	               <img src="<?php echo Yii::app()->request->baseUrl; ?>/image/youtube.png">
+	               <img src="<?php echo Yii::app()->request->baseUrl; ?>/image/twitter.png">
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	        	<div class="row">
+	        	    <div class="col-md-5">
+	        	    <div class="row">
+                    <input class="form-control form-input  input-tripopus" type="text" placeholder=" Name " > 
+                    </div>
+               	    </div>
+               		<div class="col-md-7">
+               		<div class="row"style="padding-left:10px; margin-bottom:10px;" >
+                  	<input class="form-control form-input form-input-tripopus input-tripopus" type="text" placeholder="Email">
+                  	</div>
+               		</div>
+               		<textarea class = "oponion form-control col-md-12 input-tripopus" rows="3" style="margin-bottom:10px;" placeholder="Send us your opinions"></textarea>
+               		<button type="button" class="btn btn-default btn-tripopus btn-sm col-md-12" style="">Send </button>
+               </div>
+	        </div>
+        </div>
+	</div>
+</div>
+<div id="copyright">
+	<div class="container">
+		<center><p id="right-reserved">© 2015 - All Rights Reserved</p></center>
+	</div>
+</div>
 
 
 
