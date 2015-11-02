@@ -14,8 +14,8 @@
 	echo $form->errorSummary($comment); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($comment,'message'); ?>
-		<?php echo $form->textArea($comment,'message',array('rows'=>6, 'cols'=>50)); ?>
+		<p class="margin-left-20">Nhận xét</p>
+		<?php echo $form->textArea($comment,'message',array('rows'=>7, 'cols'=>50,'id'=>'comment_textarea')); ?>
 		<?php echo $form->error($comment,'message'); ?>
 	</div>
 
@@ -36,11 +36,12 @@
                         $('#Comment_message').css('background-color', '#fcc');
                     }"
 		        ),
-		        array('id'=>'ext-comment-submit' . (isset($ajaxId) ? $ajaxId : ''))
+		        array('id'=>'ext-comment-submit' . (isset($ajaxId) ? $ajaxId : ''), 'class'=>'btn-comment')
 		    );
 		} else {
 			echo CHtml::ajaxSubmitButton('Update',
-				array('/comment/comment/update', 'id'=>$comment->id),
+				
+				array('/comment/comment/update', 'id'=>$comment->id,),
 				array(
 					'replace'=>'#ext-comment-form-edit-'.$comment->id,
 					'error'=>"function(){
@@ -48,7 +49,7 @@
 						$('#Comment_message').css('background-color', '#fcc');
 					}"
 		        ),
-		        array('id'=>'ext-comment-submit' . (isset($ajaxId) ? $ajaxId : ''))
+		        array('id'=>'ext-comment-submit' . (isset($ajaxId) ? $ajaxId : ''), 'class'=>'btn-comment')
 	        );
 		}
 		?>

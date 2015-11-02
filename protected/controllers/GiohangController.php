@@ -69,14 +69,39 @@ class GiohangController extends Controller
 
 		if(isset($_POST['Giohang']))
 		{
+			$idbook = intval($_POST['Giohang']["id_book"]);
+			$namebook = intval($_POST['Giohang']["name_book"]);
+			$cost = intval($_POST['Giohang']["cost"]);
+			$status = intval($_POST['Giohang']["status"]);
+			$number = intval($_POST['Giohang']["number"]);
+			$iduser = Yii::app()->user->id;
+
+			// update so luong sach
+			$book=Book::model()->findByPk($idbook);
+			// Book::model()->loadModel($idbook);
+			if ($book->slcon > $number) {
+				$book->slcon = $book->slcon - $number;
+				$book->save();
+
+
+
+			$model->id_book = $idbook;
+			$model->name_book = $namebook;
+			$model->cost = $cost;
+			$model->status = $status;
+			$model->number = $number;
+			$model->id_user = $iduser;
+
 			$model->attributes=$_POST['Giohang'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				// $this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('//site/index'));
+		}
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		// $this->render('create',array(
+		// 	'model'=>$model,
+		// ));
 	}
 
 	/**

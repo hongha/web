@@ -31,7 +31,7 @@ class Giohang extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_book, id_user, name_book, cost, number, status, time', 'required'),
+			array('id_book, id_user, name_book, cost, number, status', 'required'),
 			array('id_book, id_user, cost, number, status', 'numerical', 'integerOnly'=>true),
 			array('name_book', 'length', 'max'=>200),
 			// The following rule is used by search().

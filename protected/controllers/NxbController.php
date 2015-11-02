@@ -50,9 +50,20 @@ class NxbController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{	
+		$criteria = new CDbCriteria();
+		$criteria->compare('nxb',$id);
+		$criteria->order='id desc';
+		$book_nxb = new CActiveDataProvider('Book', array(
+				'pagination'=>array(
+				'pageSize'=>'9',
+				),
+				'criteria'=>$criteria,
+			));
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'book_nxb'=>$book_nxb,
 		));
 	}
 

@@ -2298,3 +2298,49 @@ Stack trace:
 REQUEST_URI=/laptrinhweb/index.php?r=/report/report&user_id=6
 HTTP_REFERER=http://localhost/laptrinhweb/index.php?r=/book/search&id=1
 ---
+2015/11/02 08:25:57 [error] [exception.CException] exception 'CException' with message 'Property "Book.slc" is not defined.' in C:\xampp\htdocs\yii_framework\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii_framework\framework\db\ar\CActiveRecord.php(145): CComponent->__get('slc')
+#1 C:\xampp\htdocs\laptrinhweb\protected\views\book\view.php(12): CActiveRecord->__get('slc')
+#2 C:\xampp\htdocs\yii_framework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii_framework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii_framework\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii_framework\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\laptrinhweb\protected\controllers\BookController.php(51): CController->render('view', Array)
+#7 [internal function]: BookController->actionView('26')
+#8 C:\xampp\htdocs\yii_framework\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#9 C:\xampp\htdocs\yii_framework\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii_framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii_framework\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii_framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii_framework\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii_framework\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii_framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii_framework\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii_framework\framework\web\CWebApplication.php(141): CWebApplication->runController('/book/view')
+#20 C:\xampp\htdocs\yii_framework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\laptrinhweb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/laptrinhweb/index.php?r=/book/view&id=26
+HTTP_REFERER=http://localhost/laptrinhweb/index.php?r=/book/search&id=1
+---
+2015/11/02 08:51:28 [warning] [application] Failed to set unsafe attribute "type" of "Comment".
+in C:\xampp\htdocs\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\laptrinhweb\index.php (13)
+2015/11/02 08:51:28 [warning] [application] Failed to set unsafe attribute "key" of "Comment".
+in C:\xampp\htdocs\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\laptrinhweb\index.php (13)
+2015/11/02 09:06:32 [warning] [application] Failed to set unsafe attribute "type" of "Comment".
+in C:\xampp\htdocs\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\laptrinhweb\index.php (13)
+2015/11/02 09:06:32 [warning] [application] Failed to set unsafe attribute "key" of "Comment".
+in C:\xampp\htdocs\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\laptrinhweb\index.php (13)
+2015/11/02 09:06:47 [warning] [application] Failed to set unsafe attribute "type" of "Comment".
+in C:\xampp\htdocs\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\laptrinhweb\index.php (13)
+2015/11/02 09:06:47 [warning] [application] Failed to set unsafe attribute "key" of "Comment".
+in C:\xampp\htdocs\laptrinhweb\protected\extensions\comment-module\controllers\CommentController.php (50)
+in C:\xampp\htdocs\laptrinhweb\index.php (13)
