@@ -114,6 +114,24 @@ class BookController extends Controller
 			'list_book'=>$list_book,			
 		));
 	}
+
+	public function actionSearch1()
+	{
+		 $criteria= new CDbCriteria();
+		 $criteria->addCondition('nxb LIKE :str');
+		 $criteria->addCondition('name LIKE :str','OR');
+		 $criteria->addCondition('introduc LIKE :str','OR');
+		 $criteria->params[':str']='%'.$_POST['search_str'].'%';
+		 $dataProvider=new CActiveDataProvider('Book', array(
+			'pagination'=>array(
+				'pageSize'=>4,
+				),
+			'criteria'=>$criteria,
+			));
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			));
+	}
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -138,7 +156,16 @@ class BookController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
+	// in ra gio hang
+	// public function actionGiohang()
+	// {
+	// 	$dataProvider=new CActiveDataProvider('Book');
+	// 	// $iduser = Yii::app()->user->id;
+	// 	// $criteria->addCondition('nxb LIKE :$iduser');
+	// 	$this->render('giohang',array(
+	// 		'dataProvider'=>$dataProvider,
+	// 	));
+	// }
 	/**
 	 * Manages all models.
 	 */

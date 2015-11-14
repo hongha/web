@@ -168,4 +168,15 @@ class Book extends CActiveRecord
 	            ),
 	       );
     }
+    public function behaviorsbook() {
+        return array(
+            'reviewable' => array(
+                'class' => 'ext.ratebook.behaviors.reviewableBehavior',
+                // name of the table created in last step
+                'mapTable' => 'posts_reviews_nm',
+                // name of column to related model id in mapTable
+                'mapRelatedColumn' => 'postId'
+            ),
+       );
+    }
 }

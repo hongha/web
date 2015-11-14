@@ -3,21 +3,17 @@
 /* @var $data Giohang */
 ?>
 
-<div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_book')); ?>:</b>
-	<?php echo CHtml::encode($data->id_book); ?>
-	<br />
+	<div class="row">
+		<div class="col-sm-7">
+			<?php echo CHtml::encode($data->name_book); ?>
+		</div>
+		<div class="col-sm-2"><?php echo CHtml::encode($data->number); ?></div>
+		<div class="col-sm-3"><?php echo CHtml::encode($data->cost); ?></div>
+	</div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_user')); ?>:</b>
-	<?php echo CHtml::encode($data->id_user); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('name_book')); ?>:</b>
+	<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('name_book')); ?>:</b>
 	<?php echo CHtml::encode($data->name_book); ?>
 	<br />
 
@@ -31,7 +27,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>
-	<br />
+	<br /> -->
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('time')); ?>:</b>
@@ -40,4 +36,3 @@
 
 	*/ ?>
 
-</div>
