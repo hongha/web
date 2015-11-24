@@ -6,7 +6,7 @@
 	<br/>
 	<br/>
 	<span class="author">Nhà xuất bản: </span>
-	<span><?php echo $model->nxb; ?></span>
+	<span><?php echo $nxb->name; ?></span>
 	<br/>
 	<br/>
 	<span class="author">Số lượng còn: </span>

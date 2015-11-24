@@ -46,8 +46,15 @@ class BookController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$book =Book::model()->findByPk($id);
+		$id_nxb=$book->nxb;
+		$criteria= new CDbCriteria();
+		$criteria->compare('id',$id_nxb);
+		$nxb = Nxb::model()->findAll($criteria);
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'nxb'=>$nxb,
+			'book'=>$book,
 		));
 	}
 
