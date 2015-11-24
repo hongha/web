@@ -14,7 +14,7 @@
 	<br/>
 	<br/>
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Đặt mua</button>
-	<a href=""><button class="btn btn-info">Xem giỏ hàng</button> </a>
+	<a href="<?php  echo Yii::app()->request->baseUrl; ?>/index.php?r=Giohang/giohang"><button class="btn btn-info">Xem giỏ hàng</button> </a>
 	<div class="col-md-12 margin-top-20">
 	<span class="author">Giới thiệu: </span>
 	<span class="decription"><?php echo $model->introduc; ?></span>
@@ -25,6 +25,7 @@
 		'model'=>$model
 		));
 ?>
+
 
 
 

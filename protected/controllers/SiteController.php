@@ -61,6 +61,7 @@ class SiteController extends Controller
 		));
 	}
 
+
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -135,4 +136,7 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+
+	
 }

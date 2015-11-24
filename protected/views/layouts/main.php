@@ -28,7 +28,18 @@
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/image/logo.png"></a>
 	</div>
 	<div class="col-md-4 npr">
-		<input id="search" class="form-control search-input input-tripopus" placeholder="Search"/>
+		<form method="POST"  id = "" action="<?php echo Yii::app()->createUrl('Book/search1') ?>">
+                <input id = "searchname" type="search" placeholder="search" name="search_str" ><br>
+                <button id = "butsearch">Search</button>
+        </form>
+        <form method="get">
+			<input type="search" placeholder="search" name="q" 
+
+			value="<?=isset($_GET['q']) ? CHtml::encode($_GET['q']) : '' ; 
+
+			?>" />
+			<input type="submit" value="search" />
+		</form>
 	</div>
 	<div class="col-md-4">
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=/site/login"><button  class="btn btn-create btn-itineary">Đăng nhập</button></a>

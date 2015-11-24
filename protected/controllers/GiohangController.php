@@ -32,7 +32,7 @@ class GiohangController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','Giohang'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -149,6 +149,22 @@ class GiohangController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('Giohang');
 		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+	public function actionGiohang()
+	{
+		$criteria= new CDbCriteria();
+		$iduser = Yii::app()->user->id;
+		// $criteria->addCondition('id_user',$iduser);
+		$criteria->compare('id_user',$iduser);
+		$criteria->compare('status',1);
+		// $criteria->order = 'id_user desc';
+		$dataProvider=new CActiveDataProvider('Giohang',array(
+			'criteria'=>$criteria,
+			));
+	
+		$this->render('giohang',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
